@@ -21,6 +21,7 @@ if [ "$COVERALLS_TOKEN" ]; then
   pub global run dart_coveralls report \
     --token $COVERALLS_TOKEN \
     --retry 2 \
+    --debug \
     --exclude-test-files \
     test/when_test.dart
 fi
