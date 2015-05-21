@@ -10,6 +10,7 @@ set -e
 # Verify that the libraries are error free.
 dartanalyzer --fatal-warnings \
   lib/when.dart \
+  example/read_json_file.dart \
   test/when_test.dart
 
 # Run the tests.
