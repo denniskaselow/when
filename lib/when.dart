@@ -24,7 +24,7 @@ import 'dart:async';
 /// [onComplete] is then called synchronously.
 ///
 /// The captured value is then returned.
-when(callback, {onSuccess(result), onError, onComplete}) {
+dynamic when(callback, {onSuccess(result), onError, onComplete}) {
   var result, hasResult = false;
 
   try {

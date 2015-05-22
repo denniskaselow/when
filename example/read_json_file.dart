@@ -1,3 +1,6 @@
+// Copyright (c) 2015, the Dart project authors.  Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
 
 library when.example.read_json_file;
 
@@ -16,7 +19,7 @@ Future readJsonFile(String path, {onAbsent()}) => _readJsonFile(
 /// Reads and decodes JSON from [path] synchronously.
 ///
 /// If [path] does not exist, returns the result of calling [onAbsent].
-readJsonFileSync(String path, {onAbsent()}) => _readJsonFile(
+dynamic readJsonFileSync(String path, {onAbsent()}) => _readJsonFile(
     path, onAbsent, (file) => file.existsSync(),
     (file) => file.readAsStringSync());
 
